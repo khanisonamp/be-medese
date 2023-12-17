@@ -4,11 +4,11 @@ app:
   url: "https://iclaim.korkla.in"
 
 pg:
-  host: "ec2-3-210-173-88.compute-1.amazonaws.com"
+  host: "ec2-107-22-101-0.compute-1.amazonaws.com"
   port: "5432"
-  database: "d2pr7p9not5gs1"
-  username: "hsoczgmhzaxuub"
-  password: "8e4f6b08e29c09a0da087fa2ff4b8dd597b7549f3c742559c00f334b5379f7f4"
+  database: "df1a1e5v56qq2v"
+  username: "kwhjoqffyawnwt"
+  password: "1bdc4a4ac9cab04ac83fde2ec9bbf053a69122c232238c23cc03142f4d9f7a4b"
 
 rg:
   host: "ec2-44-213-228-107.compute-1.amazonaws.com"
