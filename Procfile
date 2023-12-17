@@ -1,1 +1,1 @@
-web: bin/backend-medese
+web: bin/api-medese
