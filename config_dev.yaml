@@ -1,0 +1,25 @@
+env: "dev"
+pg:
+  host: "ec2-3-210-173-88.compute-1.amazonaws.com"
+  port: "5432"
+  database: "d2pr7p9not5gs1"
+  username: "hsoczgmhzaxuub"
+  password: "8e4f6b08e29c09a0da087fa2ff4b8dd597b7549f3c742559c00f334b5379f7f4"
+
+rg:
+  host: "ec2-44-213-228-107.compute-1.amazonaws.com"
+  port: "5432"
+  database: "dali23acacvcqv"
+  username: "gfzmupznfaenyu"
+  password: "fd74fad513b5cb1c43abf706000c714aa2990e1db9dc0fadebf7f1bdebb4a4ba"
+
+cache:
+  host: "127.0.0.1"
+  port: "6379"
+  db: 3
+
+notify:
+  token: "1x9VoVXniwzPCfy8O058QBUTKLMXuC6T3MlQuTC9uwG"
+
+jwt:
+  member: "jXVra22bcVLZLKDDv6L4VVa&n%1JMHEXoEU33gNhcCu%fbHV2PZSlqXM2qkZ7U@"
