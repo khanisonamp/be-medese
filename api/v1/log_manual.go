@@ -53,3 +53,39 @@ func CreatedLogManual(ctx *fiber.Ctx) error {
 		MessageTh: "สำเร็จ",
 	})
 }
+
+func GetLogManualOrder(ctx *fiber.Ctx) error {
+	db := dbCon.DBConn
+
+	var getLogManualOrder []models.LogManualOrder = make([]models.LogManualOrder, 0)
+	if err := db.Model(&models.LogManualOrder{}).Find(&getLogManualOrder).Error; err != nil {
+		logrus.Errorln("error getLogManualOrder : ", err)
+		return ctx.Status(fiber.StatusNotFound).JSON(Result{
+			Status:    fiber.StatusNotFound,
+			Message:   "get Product error",
+			MessageTh: "get Product error",
+			Error:     err,
+		})
+	}
+
+	result := make([]map[string]interface{}, 0)
+	for _, v := range getLogManualOrder {
+
+		resultData := map[string]interface{}{
+			"created_at":   v.CreatedAt.Format("2006-01-02 15:04"),
+			"product_code": v.ProductCode,
+			"product_name": v.ProductName,
+			"order_amount": v.OrderAmount,
+			"remark":       v.Remark,
+		}
+
+		result = append(result, resultData)
+	}
+
+	return ctx.Status(fiber.StatusOK).JSON(Result{
+		Status:    fiber.StatusOK,
+		Message:   "success",
+		MessageTh: "สำเร็จ",
+		Data:      result,
+	})
+}

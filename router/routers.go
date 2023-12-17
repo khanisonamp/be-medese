@@ -31,4 +31,8 @@ func SetRouter(app *contextFiber.FiberApp) {
 	product.Post("/", api.CreateLogStock)
 	product.Get("/log-create-stock", api.LogStockGetAll)
 
+	manualOrder := v1.Group("manual-order")
+	manualOrder.Post("/", api.CreatedLogManual)
+	manualOrder.Get("/", api.GetLogManualOrder)
+
 }
